@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="/" class="brand">LaptopLens</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about" class="active">About</a>
+            <a href="/predict">Prediction</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <section class="content-card">
+            <p class="eyebrow">About the project</p>
+            <h1>Built to make laptop pricing easier to understand.</h1>
+            <p>This project predicts laptop prices using machine learning algorithms and presents the result through a
+                simple Flask web application. It brings together Python, HTML, and CSS to make the experience smooth and
+                approachable.</p>
+        </section>
+
+        <section class="feature-grid">
+            <article class="feature-card">
+                <h3>Machine Learning</h3>
+                <p>The app uses a trained regression model to estimate prices from laptop attributes.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Modern Web Design</h3>
+                <p>Each page is designed to feel clean, responsive, and easy to navigate.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Practical Use</h3>
+                <p>It is a useful example of applying data science concepts in a real-world web app.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

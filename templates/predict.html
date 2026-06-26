@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <a href="/" class="brand">LaptopLens</a>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/predict" class="active">Prediction</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+
+        <div class="predict-container">
+
+            <h1>💻 Laptop Price Prediction</h1>
+
+            <p>Fill the laptop specifications below.</p>
+
+            <form action="/prediction" method="POST">
+
+                <div class="grid">
+
+                    <!-- Company -->
+                    <div class="input-box">
+
+                        <label>Company</label>
+
+                        <select name="Company" required>
+                            <option value="">Select Company</option>
+
+                            {% for value in suggestions['Company'] %}
+                            <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                    <!-- Product -->
+                    <div class="input-box">
+
+                        <label>Product</label>
+
+                        <select name="Product" required>
+
+                            <option value="">Select Product</option>
+
+                            {% for value in suggestions['Product'] %}
+                            <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                    <!-- Screen Size -->
+                    <div class="input-box">
+
+                        <label>Screen Size (Inches)</label>
+
+                        <select name="Inches" required>
+
+                            <option value="">Select Screen Size</option>
+
+                            {% for value in suggestions['Inches'] %}
+                            <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                    <!-- CPU -->
+                    <div class="input-box">
+
+                        <label>CPU</label>
+
+                        <select name="Cpu" required>
+
+                            <option value="">Select CPU</option>
+
+                            {% for value in suggestions['Cpu'] %}
+                            <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                    <!-- RAM -->
+                    <div class="input-box">
+
+                        <label>RAM (GB)</label>
+
+                        <select name="Ram" required>
+
+                            <option value="">Select RAM</option>
+                            <option value="4">4 GB</option>
+                            <option value="8">8 GB</option>
+                            <option value="16">16 GB</option>
+                            <option value="32">32 GB</option>
+                            <option value="64">64 GB</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Memory -->
+                    <div class="input-box">
+
+                        <label>Memory</label>
+
+                        <select name="Memory" required>
+
+                            <option value="">Select Memory</option>
+
+                            {% for value in suggestions['Memory'] %}
+                            <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                    <!-- GPU -->
+                    <div class="input-box">
+
+                        <label>GPU</label>
+
+                        <select name="Gpu" required>
+
+                            <option value="">Select GPU</option>
+
+                            {% for value in suggestions['Gpu'] %}
+                            <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                    <!-- Operating System -->
+                    <div class="input-box">
+
+                        <label>Operating System</label>
+
+                        <select name="OpSys" required>
+
+                            <option value="">Select Operating System</option>
+
+                            {% for value in suggestions['OpSys'] %}
+                            <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                    <!-- Weight -->
+                    <div class="input-box">
+
+                        <label>Weight (kg)</label>
+
+                        <select name="Weight" required>
+
+                            <option value="">Select Weight</option>
+
+                            {% for value in suggestions['Weight'] %}
+                            <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button type="submit">
+                    Predict Price
+                </button>
+
+            </form>
+
+            {% if prediction_text %}
+
+            <div class="result">
+                <h2>{{ prediction_text }}</h2>
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

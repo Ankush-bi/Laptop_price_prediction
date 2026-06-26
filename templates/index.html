@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="/" class="brand">LaptopLens</a>
+        <div class="nav-links">
+            <a href="/" class="active">Home</a>
+            <a href="/about">About</a>
+            <a href="/predict">Prediction</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Smart price estimation</p>
+                <h1>Predict laptop prices with confidence.</h1>
+                <p>Enter a few details about the laptop and get a quick estimate powered by a trained machine learning
+                    model.</p>
+                <a class="btn-primary" href="/predict">Start Prediction</a>
+            </div>
+
+            <div class="hero-card">
+                <h3>Why use it?</h3>
+                <ul>
+                    <li>Fast and simple price estimates</li>
+                    <li>Built with Flask and Python</li>
+                    <li>Designed for a clean experience</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="feature-grid">
+            <article class="feature-card">
+                <h3>Accurate</h3>
+                <p>Uses a trained regression model for reliable laptop price predictions.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Easy to Use</h3>
+                <p>Select the laptop details in a few clicks and view the result instantly.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Modern UI</h3>
+                <p>Enjoy a polished interface with responsive styling on any screen.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
