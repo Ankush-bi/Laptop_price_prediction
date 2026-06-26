@@ -1,20 +1,21 @@
 # Virtual Environment
-bike_anand/
 venv/
-env/
+.venv/
 
-# Python Cache
+# Python
 __pycache__/
 *.pyc
 
 # Jupyter
 .ipynb_checkpoints/
 
-# ML Models
-Model/
-*.lb
-*.joblib
-*.pkl
+# Environment Variables
+.env
 
-# OS Files
-.DS_Store
+# Model Files
+*.pkl
+*.joblib
+*.lb
+
+# Dataset Folder
+Data/
